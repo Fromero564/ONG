@@ -1,0 +1,8 @@
+
+.user-data{
+    width: 300px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 1rem;
+    backdrop-filter: blur(15px);
+}

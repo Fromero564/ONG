@@ -1,0 +1,298 @@
+ <%- include('../partials/head') %>
+ <title>Detalle del producto</title>
+
+        <!-- Header -->
+        <%- include('../partials/header') %>
+        <!-- /Header -->
+
+      
+
+   <div class="detalle-producto-body">
+
+                <div class="detalle-main-producto">
+
+
+     <div class="detalle-del-producto">  <h3> DETALLE DEL PRODUCTO :
+
+        </h3>
+      
+           <p>NOMBRE DEL PRODUCTO : <%= product.nombre %></p>
+           </div> 
+   
+            <div class="productos-unisex">
+                    <div class="container-img">
+                  <img src="/images/<%= product.imagen %>" alt="">
+
+                   </div>
+
+                   <div class="container-info-producto">
+                 <div class="container-price">
+                      <span> $ <%= product.precio %></span>
+                      <i class="fa-solid fa-gift"></i>
+                  
+                 </div>
+
+                <div class="container-detail-product">
+
+                    <div class="form-group">
+                       
+                        <label for="colour" style="display: inline-block;"> NOMBRE:</label>
+                            
+                     <%= product.nombre %>
+
+                    </div>
+
+                      <div class="form-group">
+                       
+                        <label for="colour" style="display: inline-block;"> COLOR:</label>
+                           <%= product.color %>
+                     
+                    </div>
+
+                    <div class="form-group">
+                       
+                        <label for="medida" class="medida"> SIZE: </label>
+
+                         <%= product.talle %>
+
+
+
+
+                    </div>
+
+                                     
+                    
+
+                </div> 
+                     <form action="/carrito/<%= product.id %>" method="POST">
+                     <div class="container-add-card">
+                        <div class="container-quantity">
+                            <input type="number" placeholder="1" value="1" min="1" class="input-quantity" name="cantidad">
+                        </div>
+
+                         <div class="btn-increment-decrement">
+                            <i class="fa-solid fa-chevron-up" id="increment"></i>
+                            <i class="fa-solid fa-chevron-down" id="decrement"></i>
+
+                         </div>
+                        <div>
+
+                       
+                       <button  type="submit" class="btn-add-too-cart">
+                         Añade al carrito
+                        </button> 
+                      
+                      </form>
+                      
+                    </div>
+
+                     </div>
+
+                         <div class="container-description">
+                        
+                            <div class="title-description">
+                                <h4> Descripcion </h4>
+                                <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                            </div>
+
+                                <div class="text-description">
+
+                                   <p><%= product.descripcion %>
+                                   </p>
+
+
+
+                                </div>
+
+                         </div>
+                                 <div class="container-additional-information">
+
+                                      <div class="title-information-additional">
+                                        <h4> Informacion adicional</h4>
+
+                                        <i class="fa-sharp fa-solid fa-chevron-down"></i>
+
+                                      </div>
+                                   <div class="text-aditional-information">
+
+
+                                        <p>------------------</p>
+
+                                   </div>
+
+                                 </div>
+
+                               
+
+                        <div class="container-social">
+
+                               <span>Compartir</span>
+                                 <div class="container-buttons-social">
+
+                                  <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                  <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                  <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                  <a href=""><i class="fa-solid fa-envelope"></i></a>
+
+
+                                 </div>
+                        </div>
+
+                     <% if (estado == "admin@administrador") { %>
+                        
+                             
+                     
+                          <a
+                                href="/products/<%= product.id %>/edit"
+                                class="btn-detail-edit"
+                                >EDITAR PRODUCTO</a
+                            >
+                            <form
+                                action="/products/<%= product.id %>?_method=delete"
+                                method="POST"
+                                style="display: inline-flex"
+                            >
+                                <button
+                                    type="submit"
+                                    class="btn-detail"
+                                >
+                                    ELIMINAR
+                                </button>
+                                </form> 
+
+                              <% } %>  
+                   </div>
+
+        
+            </div>
+               <section class="container-related-products">
+               <h2>Productos Relacionados</h2>
+
+                <div class="card-list-products">
+                     <div class="card card1">
+
+                      <div class="card-img">
+
+
+                     <img src="/images/remeraH3.png" alt="">
+
+                      </div>
+                      <div class="info-card card2">
+
+                     <div class="text-product">
+                          <h3> Remera Cat Black</h3>
+                        <p class="category"> 100% Algodon </p>
+                     </div>
+                       <div class="price">
+                        $2.800
+
+                       </div>
+                      </div>
+
+                      
+
+
+                     </div>
+
+                 <div class="card">
+
+                      <div class="card-img">
+
+
+                     <img src="/images/cuadroPerro2.png" alt="">
+
+                      </div>
+                      <div class="info-card card3">
+
+                     <div class="text-product">
+                          <h3> Musculosa Mujer </h3>
+                        <p class="category"> Algodon Peruano </p>
+                     </div>
+                       <div class="price">
+                        $3.500
+
+                       </div>
+                      </div>
+
+                      
+
+
+                     </div>
+
+                     <div class="card">
+
+                      <div class="card-img">
+
+
+                     <img src="/images/taza3.png" alt="">
+
+                      </div>
+                      <div class="info-card card4">
+
+                     <div class="text-product">
+                          <h3> Cat Bad </h3>
+                        <p class="category"> Microfibra </p>
+                     </div>
+                       <div class="price">
+                        $1.800
+
+                       </div>
+                      </div>
+
+                      
+
+
+                     </div>
+
+                     <div class="card">
+
+                      <div class="card-img">
+
+
+                     <img src="/images/cuadroGato3.png" alt="">
+
+                      </div>
+                      <div class="info-card">
+
+                     <div class="text-product">
+                          <h3> Dog Bad </h3>
+                        <p class="category"> Algodon </p>
+                     </div>
+                       <div class="price">
+                        $6.600
+
+                       </div>
+                      </div>
+
+                      
+
+
+                          </div>
+           
+
+                     </div> 
+              </div> 
+
+
+</section>
+  
+    
+
+    
+      
+ 
+   <script src="/js/productos.js"></script>
+                  
+      
+   
+        
+
+
+
+        <!-- footer -->
+        <%- include('../partials/footer') %>
+        <!-- /footer -->
+   </div>
+   
+</html>  
+        

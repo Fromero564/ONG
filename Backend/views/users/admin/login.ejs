@@ -1,0 +1,46 @@
+<%- include('../../partials/head') %>
+<title>Login</title>
+<body class="body-login">
+    <%- include('../../partials/header') %>  
+    
+<section class="section-login">
+   <div class="form-box">
+       <div class="form-value">
+                 <form action="" method="post">
+                    <h2 class="h2-login">Login</h2>
+                    <div class="inputbox"> 
+                       <i class="fa-solid fa-user icono-login"></i>  
+                       <input type="text" name="usuarioLogin" id="usuarioLogin" class="input-login"  required>
+                       <label for="" class="label-login">Correo Eléctronico</label>
+                    </div>
+                    <div class="inputbox">
+                        <i class="fa-solid fa-lock icono-login"></i>   
+                        <input type="password" name="passwordLogin" id="passwordLogin"class="input-login" required>
+                        <label for="" class="label-login">Contraseña</label>
+                     </div>
+                        <% if(typeof errors != 'undefined') { %>
+                           <div class="alert-login">
+                                <p><i class="fa-solid fa-triangle-exclamation"></i>Usuario/Contraseña incorrecto/s</p>
+                           </div>
+                             <% } %>
+                     <div class="forget">
+                      <label for=""><input type="checkbox">Recordarme <a href="#">Olvidé mi contraseña</a></label>
+                     </div>
+                     <button type="submit" class="button-login"> Ingresar</button>
+                     <div class="registro">
+                         <p>Quiero colaborar <a href="/user/registro">Registrarme</a></p>
+                     </div>
+                 </form>
+        </div>
+   </div>
+</section>
+    
+
+
+
+
+<footer>
+<%- include('../../partials/footer') %>  
+</footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<header>
+  <!--Menu no Responsive Tablet/Laptop/Escritorio-->
+  <!--CSS PROPIO-->
+  <link href="/css/normalize.css" rel="stylesheet" />
+  <link href="/css/style.css" rel="stylesheet" />
+  <link href="/css/style1.css" rel="stylesheet" />
+
+  <!--Iconos-->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    rel="stylesheet"
+  />
+
+  <nav class="nav-nonresponsive">
+    <div>
+      <a href="/home"
+        ><img
+          src="/images/logoPATITAsinfondo.png"
+          alt="logo"
+          class="logo-noresponsive"
+      /></a>
+    </div>
+
+    <div class="menu1">
+      <ul class="nav-menu1">
+        <li><a href="/home">Inicio </a></li>
+
+        <li>
+          <a href="/products/tienda">Tienda </a>
+          <ul class="menu-vertical">
+            <li><a href="/products/decoracion">Decoracion</a></li>
+            <li><a href="/products/hogar">Hogar</a></li>
+            <li><a href="/products/indumentaria">Indumentaria</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/nosotros">Nosotros </a></li>
+        <li><% if (userid == "admin@administrador") { %>
+        
+          <a href="/products/create">Crear producto</a>
+        
+        <% } %></li>
+       
+          </div>
+        
+      </ul>
+    </div>
+    <div class="menu2">
+      <ul class="nav-menu2">
+        <li class="container-icon">
+          <a href="/carrito">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="count-products">
+              <span id="contador-productos"><%= productosAgregadosTotal %></span>
+              
+            </div>
+            <div class="container-cart-products hidden-cart">
+             
+            </div>
+          </a>
+        </li>
+        <li><a href="/user/login">Ingresar </a></li>
+        <li><a href="/user/registro">Registrarse</a></li>
+        <li> <% if (userid) { %>
+    <div class="div-session">
+      <p>¡Bienvenido <%= userid %>!</p>
+    </div>
+ 
+      <a href="/logout">Salir</a>
+ 
+    <% } %></li>
+      </ul>
+    </div>
+  </nav>
+  <!--Menu Responsive para celular-->
+  <div class="menuresponsive">
+    <div class="respmenu">
+      <div class="logo-tienda-responsive">
+        <a href="/home"
+        ><img src="/images/logoPATITAsinfondo.png" alt="logo" class="img-logo" /></a>
+        <% if (userid) { %>
+          <div class="responsive-user">
+            <p>¡Bienvenido <%= userid %>!</p>
+          </div>
+          <% } %>
+        <div class="logo-header">
+          <a href="/carrito"
+            ><i class="fa-solid fa-cart-shopping carrito"></i
+          ></a>
+        </div>
+      </div>
+    
+      <div>
+        <input type="checkbox" />
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+        <nav>
+          <ul style="list-style:none;">
+            <li><a href="/products/tienda" class="respmenu-link">Tienda</a></li>
+            <% if (userid == "admin@administrador") { %>
+             <li><a href="/products/create" class="respmenu-link">Crear producto</a></li>
+            <% } %>
+            <li><a href="/nosotros" class="respmenu-link">Nosotros</a></li>
+            <li><a href="/user/login" class="respmenu-link">Ingresar</a></li>
+            <li><a href="/user/registro" class="respmenu-link">Registrarse</a></li>
+            <li><a href="/logout" class="respmenu-link">Salir</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script src="/carrito.js"></script>
+</header>

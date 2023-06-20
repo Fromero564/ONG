@@ -1,0 +1,55 @@
+[
+    {
+        "id": 1679415724144,
+        "usuario": "Fernando Romero",
+        "email": "fer@fer",
+        "password": "Contraseña123",
+        "direccion": "Calle 123",
+        "pais": "Argentina",
+        "telefono": "23424242",
+        "tipo": "voluntario"
+    },
+    {
+        "id": 1679419519506,
+        "usuario": "Pablo Perez",
+        "email": "pipo@pescador",
+        "password": "pescador123",
+        "direccion": "Calle Paraguay 1234",
+        "pais": "Argentina",
+        "telefono": "3252523",
+        "tipo": "voluntario"
+    },
+    {
+        "id": 1679439679560,
+        "usuario": "Jose Carlos Courby",
+        "email": "josecourby@gmail.com",
+        "password": "contraseña123",
+        "direccion": "Maipu 596",
+        "pais": "Argentina",
+        "telefono": "3364674260",
+        "tipo": "ambos"
+    },
+    {
+        "id": 1679594574302,
+        "usuario": "Fernando Romero",
+        "email": "fer@fernando",
+        "password": "Contra123",
+        "direccion": "Calle falsa123",
+        "pais": "Argentina",
+        "telefono": "3423423",
+        "tipo": "ambos"
+    },
+    {
+        "id": 1679595253985,
+        "usuario": "Prueba",
+        "email": "prueba@prueba",
+        "password": "prueba123",
+        "direccion": "Prueba123",
+        "pais": "Argentina",
+        "telefono": "324234",
+        "tipo": "comprador"
+    },
+    {
+        "id": 1680217207364
+    }
+]

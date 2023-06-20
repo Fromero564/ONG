@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../../partials/head') %>
+ <title>Formulario de edición</title>
+    <body>
+        <!-- Header -->
+        <%- include('../../partials/header',{title: 'Editando: ' + product.nombre}) %>
+        <!-- /Header -->
+ <div class="container products-wrapper edit-detail">
+       
+            <div class="col-12 box1">
+                <form
+                    action="/products/<%= product.id %>?_method=put"
+                    method="POST" 
+                    enctype="multipart/form-data"
+                >
+                    <div class="row">
+                        
+                           <div class="row">
+                
+                    <h2 class="products-title">
+                        FORMULARIO EDICION DE PRODUCTO
+                    </h2>
+               
+                 <h2 class="products-title">
+                        Estás editando: <i><%= product.nombre %> </i>
+                    </h2>
+            </div>
+                        <div class="col-12 col-md-6">
+                            <label for="price" class="form-label"
+                                >Nombre:</label
+                            >
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Ej: 5678"
+                                class="form-input"
+                                value="<%= product.nombre %>"
+        
+                            
+                            />
+                        </div>
+                  
+                              <div class="col-12 col-md-6">
+                            <label for="size" class="form-label"
+                                >Size:</label
+                            >
+                            <input
+                                type="text"
+                                id="size"
+                                name="size"
+                                placeholder="Especifique un talle si es necesario"
+                                class="form-input"
+                                value="<%= product.talle %>"
+                             
+                            />
+                        </div>
+                              <div class="col-12 col-md-6">
+                            <label for="colour" class="form-label"
+                                >Colour:</label
+                            >
+                            <input
+                                type="text"
+                                id="colour"
+                                name="colour"
+                                placeholder="Ej:azul"
+                                class="form-input"
+                                value="<%= product.color %>"
+                               
+                            />
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="imagen">Imagen actual:</label>
+                                <% if (product.imagen) { %>
+                                  <img class="img-edit" src="<%= imageUrl + product.imagen %>" alt="<%= product.nombre %>">
+                                <% } else { %>
+                                  <p>No hay imagen disponible</p>
+                                <% } %>
+                            </div>
+                              
+                              <div class="form-group">
+                                <label for="imagen">Cargar nueva imagen:</label>
+                                <input type="file" id="imagen" name="imagen" class="form-input" accept="imagen/png/jpeg">
+                              </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="category" class="form-label "
+                                >Categoría:</label
+                            >
+                            <select
+                                name="category"
+                                id="category"
+                                class="form-input"
+                            >
+                                <option value="">Elegí</option>
+                                 <option value="decoracion" <%= product.categoria=="decoracion" ? "selected" : "" %>>Decoracion</option>
+                                <option value="hogar" <%= product.categoria=="hogar" ? "selected" : "" %>>
+                                    Hogar
+                                </option>
+                                <option value="indumentaria" <%= product.categoria=="indumentaria" ? "selected" : "" %>>
+                                  Indumentaria
+                                </option>
+                            </select>
+                            
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="price" class="form-label"
+                                >Precio:</label
+                            >
+                            <input
+                                type="text"
+                                id="price"
+                                name="price"
+                                placeholder="Ej:1500"
+                                class="form-input"
+                                 value="<%= product.precio %>"
+                          
+                               
+                            />
+                        </div>
+                        <div class="col-12">
+                            <label for="description" class="form-label"
+                                >Descripcion:</label
+                            >
+                              <textarea
+                                name="description"
+                                id="description"
+                                class="form-input"
+                            ><%= product.descripcion %></textarea>
+                        </div>
+                        <div class="contenedor-botones-edit">
+                            <div class="">
+                                <button type="submit" class="edit"> <span> Guardar Producto</span>
+                                </button>
+                            
+                            </div>
+                            <div class=" boton-cancelar-edit">
+                            
+                                <a href="/products/tienda" class="edit"> Cancelar  </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /todos los productos -->
+
+        <!-- footer -->
+        <%- include('../../partials/footer') %>
+        <!-- /footer -->
+    </body>
+</html>
+
+
+

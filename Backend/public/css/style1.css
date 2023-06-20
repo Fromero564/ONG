@@ -1,0 +1,486 @@
+
+
+.imagen{
+    
+    width: 100%;
+}
+body{
+  background-color: whitesmoke;
+}
+.producto{
+   /* box-shadow: rgb(100, 100, 100) 0px 0px 10px;
+   border-bottom: 1px solid black;
+    width: 90%;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.main h2{
+  margin-left: 15px;
+}
+.nombre-producto{
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+.precio-tacho{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    text-align: right;
+}
+.precio-tacho i{
+  margin-bottom: 10px;
+}
+.desplegable{
+  display: flex;
+}
+.desplegable label{
+  margin-right: 5px;
+}
+
+.camion{
+    margin-bottom: 15px;
+    
+}
+
+.envio{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    border-top: 3px solid white;
+}
+.detalle{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    margin-left: 10px
+}
+.detalle h3{
+  margin-bottom: 10px;
+}
+.subtotal{
+    text-align: center;
+    width: 100%;
+    
+}
+.w-30{
+    width: 30%;
+}
+.w-100{
+    width: 100%;
+}
+.total{
+    display: flex;
+   /* flex-direction: column;*/
+    padding-top: 30px;
+    margin-left: 10px;
+    
+}
+.total button{
+   
+    height: 100%;
+    padding: 5px 8px;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #74BDE0;
+  
+}
+.boton-y-link{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    text-align: center;
+    margin-top: 80px;
+    padding-bottom: 10px;
+}
+.boton-calcular{
+    margin-left: 15px;
+}
+
+
+/*FORMULARIO LOGIN*/
+.box-form-login{
+  width: 100%;
+ 
+}
+
+.formulario{
+  padding: 20px 15px;
+  text-align: center;
+  
+}
+.titulo-login{
+  padding-bottom: 20px;
+  text-shadow: 2px 2px 5px white;
+  
+}
+.input-box{
+  margin-bottom: 15px;
+
+}
+.input-box label{
+  margin-bottom: 10px;
+  display: block;
+  font-size: 20px;
+}
+.campo-input{
+  width: 80%;
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: none;
+}
+.boton-login{
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: aliceblue;
+  margin-top: 15px;
+  border: none;
+
+}
+.check-login{
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  align-items: center;
+}
+.check{
+  margin-left: 5px;
+}
+.olvido-contraseña{
+   
+   text-align: center;
+}
+
+/*FIN LOGIN NO RESPONSIVE*/
+
+
+/*VISTA DONACIONES
+
+.body-donaciones{
+  background: linear-gradient(#f3f5f6,rgb(199, 186, 186));
+  margin: 0 auto;
+}
+.donaciones{
+  display: flex;
+  border-bottom: 2px solid black;
+ 
+}
+.donaciones h1{
+  margin-top: 10px;
+  text-align: center;
+  text-shadow: 2px 2px orange;
+
+}
+.h2-donaciones{
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid black;
+}
+
+.body-donaciones p{
+  text-align: left;
+  font-size: 18px;
+  padding-left: 5px;
+  margin-left: 10px;
+}
+.donacion-monetaria{
+  display: flex;
+  flex-direction: column;
+}
+.logo-en-donoaciones, .info-banco, .box1-donaciones, .donaciones-mercado-pago{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.logo-en-donaciones{
+  display: none;
+}
+.whatsapp{
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.whatsapp a{
+  text-align: center;
+ 
+}
+.whatsappFooter{
+  font-size: 18px;
+  text-align: center;
+}
+.otras-donaciones{
+  border-top: 2px solid black;
+  margin-top: 15px;
+}
+.otras-donaciones h2{
+  text-align: center;
+  color: rgba(255, 166, 0, 0.792);
+  margin: 20px 0 20px 0;
+}
+.info-banco h2{
+  color: #2c83ab;
+  font-weight: bold;
+  text-align: center;
+}
+.info-banco{
+  border-bottom: 2px solid black;
+}
+.donacion-mercado-pago h2{
+  color: crimson;
+  font-weight: bold;
+  text-align: center;
+}
+*/
+
+
+
+@media(min-width: 769px){
+    /*laptop*/
+
+    .total button{
+      width: 200px;
+      height: 40px;
+      box-shadow: 2px 2px 5px white;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .boton-y-link{
+      
+      margin-left: 280px;
+    }
+    .producto{
+      width: 80%;
+      justify-content: space-around;
+      margin: 0 auto;
+    }
+    
+
+    /*carrito para modo escritorio*/
+
+.main{
+    margin: 0 auto;
+    /*width: 80%;
+    height: 80%;*/
+    display: flex;
+    flex-wrap: wrap;
+      
+  }
+  .imagen{
+    width: 40%;
+  }
+  /*.image:hover{
+    box-shadow: ;
+  }*/  
+  .section-box{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+    
+  }
+  .h2-responsive{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 30px;
+  }
+  .detalle{
+    justify-content: start;
+    margin-left: 30px;
+  }
+  .detalle h3{
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+  .detalle label{
+    font-size: 20px;
+    margin-right: 5px;
+  }
+  .delpleglable{
+    display: flex;
+  }
+  .precio-tacho{
+    justify-content:start;
+    flex-direction: column-reverse;
+    margin-left: 50px;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  .precio-tacho i{
+    margin-top: 38px;
+  }
+  .total{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+  }
+  .total h2{
+    width: 100%;
+  }
+  .w-30{
+    width: 80%;
+    height: 30px;
+  }
+  .boton-calcular{
+    margin: 0;
+  }
+  .camion{
+    margin-left: 20px;
+  }
+  .envio{
+    width: 80%;
+    
+  }
+  .input-envio{
+    margin-left: 20px;
+  }
+  .subtotal{
+    text-align: right;
+    margin-right: 60px;
+    font-size: 20px;
+  }
+  .input-cp{
+    margin-bottom: 20px;
+  }
+ 
+  
+  .boton-tacho{
+    
+    border: none;
+   
+  }
+  .boton-tacho i{
+    font-size: 1.5em;
+    
+   
+  }
+  /*formulario login responsive*/
+
+ .formulario{
+  /*background-image:url(../images/fotohsection2.jpg) ;*/
+  background-size: cover;
+  background-position: center center;
+   background: linear-gradient(#f3f5f6,rgb(199, 186, 186));
+ }
+
+ .titulo-login{
+  text-align: left;
+  margin-left: 150px;
+  color: white;
+  text-shadow: 5px 5px 5px #74BDE0;
+ }
+
+ .campo-input{
+  width: 40%;
+  display: flex;
+  padding: 10px 0px
+ }
+ .input-box label{
+  text-align: left;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 10px;
+ }
+ .boton-login{
+  display: flex;
+  margin-top: 35px;
+  width: 40%;
+  justify-content: center;
+  background-color: #74BDE0;
+  text-align: center;
+  font-size: 15px;
+
+ }
+ .boton-login:hover{
+  background-color: #052838;
+  box-shadow: 1px 1px 3px white;
+  color: white;
+ }
+ .check-login{
+  color: white;
+  text-align: left;
+  justify-content: left;
+ }
+ .olvido-contraseña{
+  text-align: left;
+  margin-left: 40px;
+ }
+ /*VISTA DONACIONES*/
+
+ .donacion-monetaria{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no rap;
+ border-top: 2px solid black;
+ justify-content: space-around;
+  
+
+ }
+ .info-banco{
+  width: 30%;
+  margin-top: 25px;
+ }
+ .donacion-mercado-pago{
+  width: 30%;
+  margin-top: 25px;
+ }
+ .logo-en-donaciones{
+  width: 30%;
+  display: block;
+  margin-top: 40px;
+ }
+ .donaciones{
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+ }
+ .h2-donaciones{
+ text-align: center;
+  margin-bottom: 30px;
+  border: none;
+ }
+ .box1-donaciones{
+  width: 70%;
+ }
+ .otras-donaciones{
+width: 30%;
+border: none;
+margin-top: 25px;
+ }
+
+  
+}
+
+
+@media (min-width:1281px){
+  .olvido-contraseña{
+    margin-left: 10em;
+  }
+
+  .total button{
+    width: 200px;
+    height: 40px;
+    box-shadow: 2px 2px 5px white;
+    font-size: 16px;
+    position: absolute;
+    left: 500px;
+    top: 760px
+  }
+  .total a{
+    text-align: center;
+    margin-left: 540px;
+    
+    
+  }
+  .logo-en-donaciones{
+    width: 30%;
+    display: block;
+    margin-top: 5px;
+   }
+   .box1-donaciones p{
+    font-size: 22px;
+   }
+   .donacion-monetaria h2{
+    margin-top: 20px;
+   }
+}
+

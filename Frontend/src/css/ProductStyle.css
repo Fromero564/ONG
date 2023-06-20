@@ -1,0 +1,39 @@
+.product-tab{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-tab table{
+    backdrop-filter: blur(15px);
+    font-weight: bold;
+}
+
+.cantidadProductos{
+    width: 300px;
+    height: 100px;
+    background-color: pink;
+}
+
+.cantidadProductosDeco{
+    width: 300px;
+    height: 100px;
+    background-color: greenyellow;
+}
+.cantidadProductosHogar{
+    width: 300px;
+    height: 100px;
+    background-color: orange;
+}
+
+.cantidadProductosIndu{
+    width: 300px;
+    height: 100px;
+    background-color: lightskyblue;
+}
+
+@media (max-width:700px){
+    .product-tab{
+       display:block;
+    }
+   }

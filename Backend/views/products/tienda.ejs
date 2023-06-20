@@ -1,0 +1,22 @@
+<%- include('../partials/head') %>
+<title>Tienda</title>
+
+    <%- include('../partials/header') %>
+    
+<main class="main-tienda">   
+   
+        <% productos.forEach(product => { %> <%-
+            include("../partials/productCard",{product}) %> 
+           
+            
+        <% }) %>
+
+</main>
+
+<footer>
+    <%- include('../partials/footer') %>  
+</footer>
+
+</body>
+
+</html>

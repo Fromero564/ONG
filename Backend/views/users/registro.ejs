@@ -1,0 +1,102 @@
+<%- include('../partials/head') %>
+<title>Registro</title>
+<body class="body-register">
+  <!-- Header -->
+  <%- include('../partials/header') %>
+  <!-- /Header -->
+ 
+  <div class="container-register">
+    <div class="form-box-register">
+     
+      <form method="POST" action="/registro/create" name="Formfill">
+        <% if(typeof mensaje != 'undefined') { %>
+          <div class="alert-registro">
+            
+               <p><i class="fa-solid fa-triangle-exclamation"></i><%= mensaje %></p>
+          </div>
+            <% } %>
+        <h2>Registro</h2>
+        <div class="input-registro">
+          <i class="fa-solid fa-user icono-registro"></i>
+          <input
+            type="text"
+            name="nameRegister"
+            placeholder="Nombre y Apellido"
+            required
+          />
+        </div>
+        <div class="input-registro">
+          <i class="fa-solid fa-envelope icono-registro"></i>
+          <input
+            type="email"
+            name="emailRegister"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div class="input-registro">
+          <i class="fa-solid fa-key icono-registro"></i>
+          <input
+            type="password"
+            name="passwordRegister"
+            placeholder="Contraseña"
+            required
+          />
+        </div>
+        <div class="input-registro">
+          <i class="fa-solid fa-map-location icono-registro"></i>
+          <input
+            type="text"
+            name="direccionRegister"
+            placeholder="Dirección"
+            required
+          />
+        </div>
+        <div class="input-registro">
+          <i class="fa-solid fa-globe icono-registro"></i>
+          <select
+            type="text"
+            name="paisRegister"
+            placeholder="País"
+            value="Seleccione un pais"
+            required
+          >
+            <option value="" selected disabled>
+              Seleccione país de residencia
+            </option>
+            <% countries.forEach(country => { %>
+            <option><%= country.name.common %></option>
+            <% }); %>
+          </select>
+        </div>
+        <div class="input-registro">
+          <i class="fa-solid fa-mobile icono-registro"></i>
+          <input
+            type="text"
+            name="telefonoRegister"
+            placeholder="Telefono"
+            required
+          />
+        </div>
+        <div class="input-registro">
+          <label for="tipoRegistro" class="label-registro"
+            >Seleccione el tipo de registro:</label
+          >
+          <select name="tipoRegistro" required>
+            <option value="1">Voluntario</option>
+            <option value="2">Comprador</option>
+            <option value="3">Ambos</option>
+          </select>
+        </div>
+        <div class="enviar-registro">
+          <input type="submit" class="boton-registro" value="Registrar" />
+        </div>
+        <div class="grupo">
+          <span><a href="/user/login">Ir a Login</a></span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <%- include('../partials/footer') %>
+</body>

@@ -1,0 +1,22 @@
+<%- include('../partials/head') %>
+<title>Indumentaria</title>
+
+    <%- include('../partials/header') %>
+ 
+<main class="main-tienda">   
+   
+        <% pIndumentaria.forEach(product => { %> <%-
+            include("../partials/productCard",{product}) %> 
+           
+            
+        <% }) %>
+
+</main>
+
+<footer>
+    <%- include('../partials/footer') %>  
+</footer>
+
+</body>
+
+</html>

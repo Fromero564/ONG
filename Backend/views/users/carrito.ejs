@@ -1,0 +1,84 @@
+<%- include('../partials/head') %>
+<title>Selección Carrito</title>
+<body>
+    <%- include('../partials/header') %>
+    
+<main id="contenedor-productos">
+    
+<section class="seccion-carrito">
+    <table  class="tabla"  style="border:1px black">
+        <tr style="border:1px solid black">
+            <th  style="margin-left: 20px;  width: 00px; font-weight: bold;">Nombre</th>
+            <th  style="width: 00px; font-weight: bold;">Cantidad</th>
+            <th  style="width: 00px; font-weight: bold; ">Precio Unitario</th>
+            <th  style="width: 00px; font-weight: bold;">Precio Total</th>
+            <th  style="width: 00px; font-weight: bold;">Modificar Cantidad</th>
+            <th  style="width: 00px; font-weight: bold;">Eliminar</th>
+        </tr>
+    
+        <% productosAgregados.forEach(producto => { %>
+        <tr style="border:1px solid black; color: black">
+            <td style="width: 100px; color: black; margin-left: 10px;"><%= producto.Producto.nombre %></td>
+            <td style="width: 100px;"><%= producto.cantidad %></td>
+            <td style="width: 100px;"> $<%= producto.Producto.precio %></td>
+            <td style="width: 100px;"> $<%= producto.Producto.precio * producto.cantidad%></td>
+           
+           <td>
+              
+            <article class="contenedor-boton-eliminar" >
+                <form 
+                action="/carrito/<%= producto.id %>?_method=put"
+                method="POST"
+                style="display: inline-flex"   
+                >
+                <input type="number" id="cantidad" name="cantidad" value="<%=producto.cantidad %>" min="0">
+                <button type="submit" class="boton-eliminar-carrito boton-registro" >
+                Modificar
+                </button>
+                </form>
+            </article>
+           </td>
+           <td>
+              
+            <article class="contenedor-boton-eliminar" >
+                <form 
+                action="<%= producto.productos_id %>?_method=delete"
+                method="POST"
+                style="display: inline-flex"
+                
+                >
+                <button
+                
+                 type="submit"
+                 class="boton-eliminar-carrito boton-registro"
+                >
+                <i class="fas fa-trash-alt" style="color:rgb(244, 27, 27)"></i>
+                   
+                </button>
+                </form>
+            </article>
+           </td>
+           
+           
+        </tr>
+        <% }) %>
+    </table>
+    
+
+
+<div class=" total-compra">
+    <% let total = productosAgregados.reduce((suma, producto) => suma + (producto.Producto.precio * producto.cantidad), 0) %>
+    <p>Total de su compra: $<%= total.toFixed(2) %></p>
+</div>
+
+
+</section>
+
+</main>
+
+
+<%- include ('../partials/footer') %>
+</body>
+
+</html>
+

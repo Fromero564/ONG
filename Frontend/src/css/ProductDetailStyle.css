@@ -1,0 +1,16 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+.product-detail{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 1rem;
+    backdrop-filter: blur(15px);
+}
+.product-detail img{
+    width: 300px;
+    height: 300px;
+}
